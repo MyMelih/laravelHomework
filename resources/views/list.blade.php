@@ -27,7 +27,7 @@
             <a href=" {{ route('gibir')}}" class="btn btn-primary float-start">Anasayfa</a>
             <h3 style="display: flex; justify-content: center">Kayıt Listele</h3>
         </div>
-        <table class="table table-striped table-hover table-sm table-dark table-bordered mt-5" id="table">
+        <table class="table table-striped table-hover table-sm table-dark table-bordered" id="table">
             <thead>
                 <tr>
                     <th scope="col">K.No</th>
@@ -46,7 +46,6 @@
                 </tr>
             </thead>
             <tbody>
-
             </tbody>
         </table>
     </div>
@@ -138,7 +137,7 @@
         $.ajaxSetup({
             headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-             }
+            }
         });
 
         //  listeleme
