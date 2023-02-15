@@ -18,7 +18,7 @@ class ListController extends Controller
     public function firmaListele(Request $request)
     {
         if ($request->ajax()) {
-            $data = Firma::latest()->get();
+            $data = Firma::latest();;
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function ($row) {
@@ -30,7 +30,7 @@ class ListController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
-        return view('list');
+        return Datatables::of($data);
     }
 
     function firmaDetay($id)
