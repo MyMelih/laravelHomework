@@ -27,3 +27,7 @@ Route::get('/firma/detay/{id}', [ListController::class, 'firmaDetay']);
 Route::put('/firma/guncelle/{id}', [ListController::class, 'firmaGuncelle'])->name('firma.guncelle');
 
 Route::delete('/firma/sil/{id}', [ListController::class, 'firmaSil']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
